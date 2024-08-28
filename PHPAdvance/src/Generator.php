@@ -1,6 +1,5 @@
 <?php
 
-// index.php
 require 'Generators/NumberGenerator.php';
 require 'Output/NumberPrinter.php';
 
