@@ -1,15 +1,10 @@
 <?php
 
+// index.php
+require 'Generators/NumberGenerator.php';
+require 'Output/NumberPrinter.php';
 
-function getNumbers() {
-    for ($i = 0; $i < 5; $i++) {
-        yield $i;
-    }
-}
+use Output\NumberPrinter;
 
-// Usage
-foreach (getNumbers() as $number) {
-    echo $number; 
-    echo '<br/>'; // Outputs: 0 1 2 3 4
-}
-?>
+$printer = new NumberPrinter();
+$printer->printNumbers();

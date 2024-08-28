@@ -54,10 +54,10 @@ $pizza = new Margherita();
 echo $pizza->getDescription() . ": $" . $pizza->getPrice(); // Output: Margherita Pizza: $5.99
 echo '<br>';
 
-$pizza = new Cheese(new Margherita());
-echo $pizza->getDescription() . ": $" . $pizza->getPrice(); // Output: Margherita Pizza, extra cheese: $6.99
+$cheesePizza = new Cheese($pizza);
+echo $cheesePizza->getDescription() . ": $" . $cheesePizza->getPrice(); // Output: Margherita Pizza, extra cheese: $6.99
 echo '<br>';
 
-$pizza = new Mushrooms(new Cheese(new Margherita()));
-echo $pizza->getDescription() . ": $" . $pizza->getPrice(); // Output: Margherita Pizza, extra cheese, mushrooms: $7.49
+$mushroomCheesePizza = new Mushrooms($cheesePizza);
+echo $mushroomCheesePizza->getDescription() . ": $" . $mushroomCheesePizza->getPrice(); // Output: Margherita Pizza, extra cheese, mushrooms: $7.49
 echo '<br>';

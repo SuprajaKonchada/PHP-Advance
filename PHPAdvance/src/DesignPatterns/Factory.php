@@ -28,5 +28,9 @@ class Phone {
 }
 
 // Usage
-$product = ProductFactory::create('Laptop'); // Outputs: Laptop created
+try {
+    $product = ProductFactory::create('Laptop'); // Outputs: Laptop created
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
 ?>
